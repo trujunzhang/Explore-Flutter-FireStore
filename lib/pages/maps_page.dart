@@ -106,7 +106,7 @@ class _MapsPageState extends State<MapsPage> {
 
   //This is placeholder for the main Map Widget, as the transition from
   //one Tab to another causes blinking as Map Tab is in between.
-  
+
   Widget mapPlaceHolder() {
     return ListView(
       physics: NeverScrollableScrollPhysics(),

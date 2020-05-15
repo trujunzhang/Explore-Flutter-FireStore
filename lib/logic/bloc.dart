@@ -11,12 +11,16 @@ class Bloc extends Object with ValueTransformer implements BaseBloc {
   var _searchValController = BehaviorSubject<String>();
 
   Function(String) get feedStatus => _radioController.sink.add;
+
   Function(String) get sinkColorName => _themeController.sink.add;
+
   Function(String) get feedSearchVal => _searchValController.sink.add;
 
   Stream<String> get recieveStatus =>
       _radioController.stream.transform(transformValue);
+
   Stream<String> get recieveColorName => _themeController.stream;
+
   Stream<String> get recieveSearchVal => _searchValController.stream;
 
   @override

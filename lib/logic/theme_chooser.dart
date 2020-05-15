@@ -10,4 +10,3 @@ themeChooser(data) => (data == 'Yellow')
             : (data == 'Green')
                 ? Color(0xff00d000)
                 : (data == 'Pink') ? Color(0xffff00a8) : Colors.grey;
-

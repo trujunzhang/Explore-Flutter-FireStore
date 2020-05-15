@@ -10,6 +10,7 @@ class DetailsPage extends StatefulWidget {
   final String description;
   final int numberStories;
   final String locationID;
+
   // final List<dynamic> storyList;
 
   //Recieving Datas

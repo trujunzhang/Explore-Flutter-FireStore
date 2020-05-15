@@ -58,10 +58,7 @@ class DetailsCover extends StatelessWidget {
               //Venue Location + some other details.
               color: Colors.transparent,
               child: Text(
-                venueLocation +
-                    '  .  ' +
-                    numberStories.toString() +
-                    ' Stories',
+                venueLocation + '  .  ' + numberStories.toString() + ' Stories',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontFamily: 'OpenSans',

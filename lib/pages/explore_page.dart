@@ -26,6 +26,7 @@ class _ExplorePageState extends State<ExplorePage> {
       stream: bloc.recieveSearchVal,
       builder: (BuildContext context, AsyncSnapshot searchSnapshot) {
         String searchVal = searchSnapshot.data;
+//        String searchVal = 'wh';
         print(searchVal);
         return ListView(
           //Contains the whole Page. Its a ListView but given height to

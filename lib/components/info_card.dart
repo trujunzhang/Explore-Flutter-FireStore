@@ -8,6 +8,7 @@ class InfoCard extends StatelessWidget {
     @required this.displayValue,
     @required this.labelTitle,
   });
+
   @override
   Widget build(BuildContext context) {
     return Container(

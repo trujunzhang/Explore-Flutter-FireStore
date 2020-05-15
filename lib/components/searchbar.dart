@@ -4,7 +4,6 @@ import '../logic/bloc.dart';
 
 //This is SearchBar.
 class SearchBar extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(

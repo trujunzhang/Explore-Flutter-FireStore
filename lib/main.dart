@@ -6,6 +6,12 @@ import './pages/homepage.dart';
 import './logic/sharedPref_logic.dart';
 import './logic/theme_chooser.dart';
 
+import './pages/explore_page.dart';
+import './pages/maps_page.dart';
+import './pages/myprofile_page.dart';
+import './components/custom_appbar.dart';
+import './components/dialog.dart';
+
 void main() {
   //Following codes Customizes the StatusBar & NavigationBar.
   //Services Package were imported for these.
@@ -47,22 +53,26 @@ class _MyAppState extends State<MyApp> {
 
       stream: bloc.recieveColorName,
       initialData: 'Yellow',
-      builder: (BuildContext context, AsyncSnapshot snapshot) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Explore App',
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+//        var homePage = HomePage();
+        var homePage = Scaffold(body: ExplorePage());
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Explore App',
 
-        //Global ThemeData for the App
-        theme: ThemeData(
-          primaryColor: themeChooser(snapshot.data),
-          accentColor: Color(0xffb6b6b6),
-          fontFamily: 'NotoSerif',
-          scaffoldBackgroundColor: Colors.white,
-        ),
+          //Global ThemeData for the App
+          theme: ThemeData(
+            primaryColor: themeChooser(snapshot.data),
+            accentColor: Color(0xffb6b6b6),
+            fontFamily: 'NotoSerif',
+            scaffoldBackgroundColor: Colors.white,
+          ),
 
-        //The HomePage is being called here homepage.dart
-        //Also the bloc is being transfered to HomePage here. Its Imp.
-        home: HomePage(),
-      ),
+          //The HomePage is being called here homepage.dart
+          //Also the bloc is being transfered to HomePage here. Its Imp.
+          home: homePage,
+        );
+      },
     );
   }
 }
