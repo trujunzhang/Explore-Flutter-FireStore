@@ -26,8 +26,10 @@ class _MapsPageState extends State<MapsPage> {
   //This is the main Map Widget.
   Widget theMap() {
     return StreamBuilder(
-      stream:
-          locationsFSI.collection('restaurants').orderBy('displayName').snapshots(),
+      stream: locationsFSI
+          .collection('restaurants')
+          .orderBy('displayName')
+          .snapshots(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (!snapshot.hasData) {
           locationsList = [
