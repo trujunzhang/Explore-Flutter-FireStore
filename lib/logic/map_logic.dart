@@ -16,8 +16,8 @@ void moveToLocation(
 addDDMenuItems(snaps, locationsList) {
   for (int i = 0; i < snaps.length; ++i) {
     locationsList.add(DropdownMenuItem(
-      child: Text(snaps[i]['venueName']),
-      value: snaps[i]['venueName'],
+      child: Text(snaps[i]['displayName']),
+      value: snaps[i]['displayName'],
     ));
   }
 }
@@ -26,8 +26,8 @@ addDDMenuItems(snaps, locationsList) {
 addMarkers(snaps, markersList) {
   for (int i = 0; i < snaps.length; ++i) {
     markersList.add(Marker(
-      markerId: MarkerId(snaps[i]['venueName']),
-      position: LatLng(snaps[i]['latN'], snaps[i]['longE']),
+      markerId: MarkerId(snaps[i]['displayName']),
+      position: LatLng(snaps[i]['latitude'], snaps[i]['longitude']),
     ));
   }
 }
@@ -35,6 +35,6 @@ addMarkers(snaps, markersList) {
 //Add Locations to be animated to from FireStore.
 addLocationCoordinates(snaps, locationsLatLng) {
   for (int i = 0; i < snaps.length; ++i) {
-    locationsLatLng.add(LatLng(snaps[i]['latN'], snaps[i]['longE']));
+    locationsLatLng.add(LatLng(snaps[i]['latitude'], snaps[i]['longitude']));
   }
 }

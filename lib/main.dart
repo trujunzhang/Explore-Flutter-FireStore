@@ -55,7 +55,9 @@ class _MyAppState extends State<MyApp> {
       initialData: 'Yellow',
       builder: (BuildContext context, AsyncSnapshot snapshot) {
 //        var homePage = HomePage();
-        var homePage = Scaffold(body: ExplorePage());
+//        var page = ExplorePage();
+        var page = MapsPage();
+        var homePage = Scaffold(body: page);
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Explore App',
