@@ -88,7 +88,7 @@ class _MapsPageState extends State<MapsPage> {
                 borderRadius: BorderRadius.circular(5),
                 child: GoogleMap(
                   initialCameraPosition: CameraPosition(
-                    zoom: 2,
+                    zoom: 20,
                     target: LatLng(20.5937, 78.9629),
                   ),
                   markers: Set.from(markersList),
