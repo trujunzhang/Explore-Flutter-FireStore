@@ -25,7 +25,7 @@ void main() {
   ));
 
   //Following code will Force the App Orientation
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   runApp(MyApp());
 }
@@ -55,8 +55,8 @@ class _MyAppState extends State<MyApp> {
       initialData: 'Yellow',
       builder: (BuildContext context, AsyncSnapshot snapshot) {
 //        var homePage = HomePage();
-//        var page = ExplorePage();
-        var page = MapsPage();
+        var page = ExplorePage();
+//        var page = MapsPage();
         var homePage = Scaffold(body: page);
         return MaterialApp(
           debugShowCheckedModeBanner: false,

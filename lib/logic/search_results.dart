@@ -7,12 +7,12 @@ import '../components/explore_list.dart';
 searchedExploreList(datas, searchVal) {
   List<DocumentSnapshot> listLocal = [];
   for (int i = 0; i < datas.length; ++i) {
-    if (datas[i]['venueName']
+    if (datas[i]['displayName']
             .substring(
                 0,
-                (searchVal.length < datas[i]['venueName'].length)
+                (searchVal.length < datas[i]['displayName'].length)
                     ? searchVal.length
-                    : datas[i]['venueName'].length)
+                    : datas[i]['displayName'].length)
             .toLowerCase() ==
         searchVal.toLowerCase()) {
       listLocal.add(datas[i]);

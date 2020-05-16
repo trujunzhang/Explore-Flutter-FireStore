@@ -32,6 +32,17 @@ class _MainCardState extends State<MainCard> {
 
   @override
   Widget build(BuildContext context) {
+    var decorationImage;
+    if (widget.imagePath != null) {
+      decorationImage = DecorationImage(
+        image: NetworkImage(widget.imagePath),
+        fit: BoxFit.cover,
+        colorFilter: ColorFilter.mode(
+          Colors.black.withOpacity(0.2),
+          BlendMode.multiply,
+        ),
+      );
+    }
     return GestureDetector(
       onTap: () {
         // Creates Details Page for respective Data.
@@ -57,14 +68,7 @@ class _MainCardState extends State<MainCard> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
             color: Colors.grey[300],
-            image: DecorationImage(
-              image: NetworkImage(widget.imagePath),
-              fit: BoxFit.cover,
-              colorFilter: ColorFilter.mode(
-                Colors.black.withOpacity(0.2),
-                BlendMode.multiply,
-              ),
-            ),
+            image: decorationImage,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

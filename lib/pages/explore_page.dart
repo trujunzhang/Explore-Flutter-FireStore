@@ -48,8 +48,8 @@ class _ExplorePageState extends State<ExplorePage> {
               height: MediaQuery.of(context).size.height - 310,
               child: StreamBuilder(
                 stream: locationsFSI
-                    .collection('locations')
-                    .orderBy('venueName')
+                    .collection('restaurants')
+                    .orderBy('displayName')
                     .snapshots(),
                 builder: (BuildContext context, AsyncSnapshot snapshot) {
                   if (!snapshot.hasData) {

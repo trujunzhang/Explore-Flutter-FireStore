@@ -14,10 +14,10 @@ Widget exploreList(datas) {
           SizedBox(
               width: (index == 0) ? 30 : (index < datas.length - 1) ? 10 : 10),
           MainCard(
-            imagePath: datas[index]['imagePath'],
-            venueName: datas[index]['venueName'],
-            venueLocation: datas[index]['venueLocation'],
-            description: datas[index]['description'],
+            imagePath: datas[index]['originalUrl'],
+            venueName: datas[index]['displayName'],
+            venueLocation: datas[index]['latitude'].toString(),
+            description: datas[index]['address'],
             locationID: datas[index].documentID,
           ),
           SizedBox(
