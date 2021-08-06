@@ -15,7 +15,7 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
-  final Firestore locationsFSI = Firestore.instance;
+  final FirebaseFirestore locationsFSI = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +26,8 @@ class _ExplorePageState extends State<ExplorePage> {
       stream: bloc.recieveSearchVal,
       builder: (BuildContext context, AsyncSnapshot searchSnapshot) {
         String searchVal = searchSnapshot.data;
-//        String searchVal = 'wh';
         print(searchVal);
+
         return ListView(
           //Contains the whole Page. Its a ListView but given height to
           //fix it on the Screen.
@@ -46,7 +46,9 @@ class _ExplorePageState extends State<ExplorePage> {
             Container(
               constraints: BoxConstraints(minHeight: 200),
               height: MediaQuery.of(context).size.height - 310,
-              child: StreamBuilder(
+              child:
+
+              StreamBuilder(
                 stream: locationsFSI
                     .collection('restaurants')
                     .orderBy('displayName')
@@ -62,9 +64,12 @@ class _ExplorePageState extends State<ExplorePage> {
                   }
                 },
               ),
+
+
             ),
           ],
         );
+
       },
     );
   }

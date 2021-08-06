@@ -26,7 +26,7 @@ class MainCard extends StatefulWidget {
 }
 
 class _MainCardState extends State<MainCard> {
-  final Firestore locationsFSI = Firestore.instance;
+  final FirebaseFirestore locationsFSI = FirebaseFirestore.instance;
 
   int numberStories = 0;
 

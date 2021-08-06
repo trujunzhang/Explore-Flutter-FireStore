@@ -16,7 +16,7 @@ class DetailsCover extends StatelessWidget {
     this.numberStories,
   });
 
-  final Firestore locationsFSI = Firestore.instance;
+  final FirebaseFirestore locationsFSI = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {

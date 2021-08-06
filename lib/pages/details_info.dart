@@ -13,7 +13,7 @@ class DetailsInfo extends StatelessWidget {
     this.locationID,
   });
 
-  final Firestore locationsFSI = Firestore.instance;
+  final FirebaseFirestore locationsFSI = FirebaseFirestore.instance;
 
   //This Page shows Stiories of a specific Location from FireStore.
   @override

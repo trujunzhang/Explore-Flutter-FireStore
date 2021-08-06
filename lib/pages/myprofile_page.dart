@@ -6,7 +6,7 @@ import '../components/externaLinkIcon.dart';
 import '../components/page_heading.dart';
 
 class MyProfilePage extends StatelessWidget {
-  final Firestore adminFSI = Firestore.instance;
+  final FirebaseFirestore adminFSI = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {

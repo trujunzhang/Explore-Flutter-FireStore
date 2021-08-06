@@ -11,7 +11,7 @@ class MapsPage extends StatefulWidget {
 }
 
 class _MapsPageState extends State<MapsPage> {
-  final Firestore locationsFSI = Firestore.instance;
+  final FirebaseFirestore locationsFSI = FirebaseFirestore.instance;
   GoogleMapController mapController;
 
   //All these datas are coming from Firestore.
