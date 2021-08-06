@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+
 import './logic/bloc.dart';
 import './pages/homepage.dart';
 import './logic/sharedPref_logic.dart';
@@ -12,9 +14,11 @@ import './pages/myprofile_page.dart';
 import './components/custom_appbar.dart';
 import './components/dialog.dart';
 
-void main() {
+void main() async {
   //Following codes Customizes the StatusBar & NavigationBar.
   //Services Package were imported for these.
+
+  await Firebase.initializeApp();
 
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
@@ -54,10 +58,10 @@ class _MyAppState extends State<MyApp> {
       stream: bloc.recieveColorName,
       initialData: 'Yellow',
       builder: (BuildContext context, AsyncSnapshot snapshot) {
-//        var homePage = HomePage();
+        var homePage = HomePage();
         var page = ExplorePage();
 //        var page = MapsPage();
-        var homePage = Scaffold(body: page);
+        // var homePage = Scaffold(body: page);
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Explore App',
